@@ -1,0 +1,33 @@
+package com.suraj.api.exception;
+
+import org.springframework.http.HttpStatus;
+
+public class BootstrapAPIException extends RuntimeException {
+    private final String errorMessage;
+    private final String errorCode;
+    private final HttpStatus status;
+
+    public BootstrapAPIException(final String errorMessage, final HttpStatus status) {
+        this.errorMessage = errorMessage;
+        this.status = status;
+        this.errorCode = null;
+    }
+
+    public BootstrapAPIException(final String errorCode, final String errorMessage, final HttpStatus status) {
+        this.errorMessage = errorMessage;
+        this.status = status;
+        this.errorCode = errorCode;
+    }
+
+    public String getErrorCode() {
+        return errorCode;
+    }
+
+    public HttpStatus getStatus() {
+        return status;
+    }
+
+    public String getErrorMessage() {
+        return errorMessage;
+    }
+}

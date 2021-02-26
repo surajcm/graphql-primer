@@ -1,0 +1,33 @@
+server:
+  port:
+    8090
+
+spring:
+  application:
+    name:
+      MockAPI
+
+logging:
+  level:
+    com:
+      suraj:
+        api:
+          INFO
+  file:
+    clean-history-on-start:
+      true
+    name:
+      logs/${spring.application.name}.log  
+
+
+graphql:
+  servlet:
+    mapping: /graphql
+    enabled: true
+graphiql:
+  mapping: /graphiql
+  endpoint:
+    graphql: /graphql
+  static:
+    basePath: /
+  enabled: true
