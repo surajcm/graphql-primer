@@ -1,4 +1,4 @@
-package com.suraj.api.film.service;
+package com.suraj.api.graphql;
 
 import graphql.kickstart.tools.GraphQLQueryResolver;
 import org.springframework.stereotype.Service;
@@ -6,7 +6,7 @@ import org.springframework.stereotype.Service;
 import java.util.Optional;
 
 @Service
-public class BootstrapAPIQueryResolver implements GraphQLQueryResolver {
+public class GraphQLPrimerQueryResolver implements GraphQLQueryResolver {
 
     public String hello(final String who) {
         return String.format("Hello, %s!", Optional.ofNullable(who).orElse("GraphQL"));

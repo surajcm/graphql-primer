@@ -1,7 +1,7 @@
 package com.suraj.api.film.connector;
 
 import com.suraj.api.model.response.Film;
-import com.suraj.api.dataaccess.connector.RestConnector;
+import com.suraj.api.rest.RestConnector;
 import org.springframework.http.HttpEntity;
 import org.springframework.http.HttpHeaders;
 import org.springframework.http.HttpMethod;

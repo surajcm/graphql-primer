@@ -1,6 +1,6 @@
-package com.suraj.api.dataaccess.connector;
+package com.suraj.api.rest;
 
-import com.suraj.api.exception.BootstrapAPIException;
+import com.suraj.api.film.exception.PrimerException;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -20,12 +20,12 @@ public class RestConnector<T> {
     public ResponseEntity<T> process(final String url,
                                      final HttpMethod method,
                                      final HttpEntity<?> requestEntity,
-                                     final Class<T> responseType) throws BootstrapAPIException {
+                                     final Class<T> responseType) throws PrimerException {
         ResponseEntity<T> responseEntity;
         try {
             responseEntity = restTemplate.exchange(url, method, requestEntity, responseType);
         } catch (HttpClientErrorException | HttpServerErrorException ex) {
-            throw new BootstrapAPIException(ex.getResponseBodyAsString(), ex.getStatusCode());
+            throw new PrimerException(ex.getResponseBodyAsString(), ex.getStatusCode());
         }
         return responseEntity;
     }
