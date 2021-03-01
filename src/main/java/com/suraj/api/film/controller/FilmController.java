@@ -2,6 +2,7 @@ package com.suraj.api.film.controller;
 
 import com.suraj.api.model.response.Film;
 import com.suraj.api.film.service.FilmService;
+import com.suraj.api.model.response.Films;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.RequestParam;
@@ -19,7 +20,7 @@ public class FilmController {
      */
     @GetMapping("/allfilms")
     @ResponseBody
-    public String getAllFilms() {
+    public Films getAllFilms() {
         return filmService.getAllFilms();
     }
 
