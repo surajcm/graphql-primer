@@ -30,7 +30,7 @@ public class FilmController {
      */
     @GetMapping("/film")
     @ResponseBody
-    public Film getFilmById(@RequestParam final String id) {
+    public Film getFilmById(@RequestParam final Long id) {
         return filmService.getFilmById(id);
     }
 }

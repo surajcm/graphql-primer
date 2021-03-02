@@ -23,18 +23,21 @@ M2_HOME, JAVA_HOME etc
 ### Swagger UI
 Please find the REST endpoint at http://localhost:8090/swagger-ui/index.html?configUrl=/v3/api-docs/swagger-config
 
+### GraphiQL UI
+Please find the GraphiQL endpoint at http://localhost:8090/graphiql
+
 <details>
   <summary>
     Sample Film Response
   </summary>
-    <a href="https://github.com/surajcm/graphql-primer/blob/main/dev/film_response.json">request.json</a>
+    <a href="https://github.com/surajcm/graphql-primer/blob/main/dev/film_response.json">film_response.json</a>
 </details>
 
 <details>
   <summary>
     Sample AllFilms Response
   </summary>
-    <a href="https://github.com/surajcm/graphql-primer/blob/main/dev/allFilms_response.json">response.json</a>
+    <a href="https://github.com/surajcm/graphql-primer/blob/main/dev/allFilms_response.json">allFilms_response.json</a>
 </details>
 
 
