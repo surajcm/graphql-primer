@@ -5,7 +5,10 @@
 #### Request
 ```
 query film($id: Long) {
-    film(id: $id) 
+	film(id: $id) {
+	  title
+	  episode_id
+	}
 }
 ```
 
@@ -20,7 +23,10 @@ query film($id: Long) {
 ```
 {
   "data": {
-    "film": "Return of the Jedi"
+    "film": {
+      "title": "Return of the Jedi",
+      "episode_id": 6
+    }
   }
 }
 ```

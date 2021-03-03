@@ -2,6 +2,7 @@ package com.suraj.api.graphql;
 
 import com.suraj.api.film.service.FilmService;
 import com.suraj.api.model.response.Film;
+import com.suraj.api.model.response.TempFilm;
 import graphql.kickstart.tools.GraphQLQueryResolver;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
@@ -16,9 +17,9 @@ public class GraphQLPrimerQueryResolver implements GraphQLQueryResolver {
     @Autowired
     private FilmService filmService;
 
-    public String film(final Long id) {
+    public TempFilm film(final Long id) {
         logger.info("GraphQL request received with id : " + id);
         Film film = filmService.getFilmById(id);
-        return Optional.ofNullable(film.getTitle()).orElse(null);
+        return Optional.ofNullable(new TempFilm().fromFilm(film)).orElse(null);
     }
 }

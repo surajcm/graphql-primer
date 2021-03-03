@@ -1,7 +1,11 @@
 <h1 align="center">
     graphql-primer
 </h1>
-
+<p align="center">
+    <a href="https://github.com/surajcm/graphql-primer/commits/" title="Last Commit"><img src="https://img.shields.io/github/last-commit/surajcm/graphql-primer?style=flat"></a>
+    <a href="https://github.com/surajcm/graphql-primer/actions/workflows/test.yml" title="Tests"><img src="https://github.com/surajcm/graphql-primer/actions/workflows/test.yml/badge.svg"></a>
+    <a href="https://github.com/surajcm/graphql-primer/blob/master/LICENSE" title="License"><img src="https://img.shields.io/badge/License-MIT-green.svg?style=flat"></a>
+</p>
 A basic GraphQL API based on spring-boot.
 
 ##### Initial Setup
@@ -40,5 +44,7 @@ Please find the GraphiQL endpoint at http://localhost:8090/graphiql
     <a href="https://github.com/surajcm/graphql-primer/blob/main/dev/allFilms_response.json">allFilms_response.json</a>
 </details>
 
+### Sample requests and responses on graphiql
+Sample requests and responses can be found [here](https://github.com/surajcm/graphql-primer/blob/main/dev/)
 
 

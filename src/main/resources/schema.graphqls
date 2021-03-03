@@ -1,3 +1,8 @@
 type Query {
-    film(id: Long): String!
+    film(id: Long): TempFilm
+}
+
+type TempFilm {
+    title: String
+    episode_id: Int
 }
