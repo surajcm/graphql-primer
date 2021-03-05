@@ -38,6 +38,13 @@ class FilmServiceImplTest {
     }
 
     @Test
+    public void validateFilmError() {
+        when(filmConnector.getFilmById(anyLong())).thenThrow(new NullPointerException());
+        Film film = filmService.getFilmById(1L);
+        Assertions.assertNull(film);
+    }
+
+    @Test
     public void validateFilms() {
         String title = "The Empire Strikes Back";
         when(filmsConnector.getAllFilmsData()).thenReturn(mockFilms(title));
