@@ -33,8 +33,8 @@ public class FilmServiceImpl implements FilmService {
         try {
             film = filmConnector.getFilmById(id);
             logger.info("Response is " + film);
-        } catch (Exception e) {
-            e.printStackTrace();
+        } catch (Exception ex) {
+            ex.printStackTrace();
         }
         return film;
     }

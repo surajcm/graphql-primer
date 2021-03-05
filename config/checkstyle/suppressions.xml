@@ -16,7 +16,6 @@ WHAT AND WHY CHECKS SUPPRESSED
 -->
 
 <suppressions>
-    <suppress files="src/main/java/com/online/travel/schema/*" checks=".*"/>
-    <suppress files="AirShopRequestBuilder.java" checks="MethodLength"/>
-    <suppress files="AirShopMapper.java" checks="MethodLength"/>
+    <suppress files="src/main/java/com/suraj/api/model/response/*" checks=".*"/>
+    <suppress files="FilmServiceImpl.java" checks="IllegalCatch"/>
 </suppressions>
