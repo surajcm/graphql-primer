@@ -19,7 +19,7 @@
         PMD Rules Configuration
     </description>
 
-    <exclude-pattern>.*/com/online/travel/schema/.*</exclude-pattern>
+    <exclude-pattern>.*/com/suraj/api/model/response/.*</exclude-pattern>
 
     <rule ref="category/java/bestpractices.xml">
         <exclude name="GuardLogStatement"/>

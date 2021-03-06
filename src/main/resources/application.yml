@@ -24,7 +24,6 @@ graphql:
   servlet:
     mapping: /graphql
     enabled: true
-graphiql:
   mapping: /graphiql
   endpoint:
     graphql: /graphql
