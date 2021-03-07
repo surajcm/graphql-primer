@@ -1,6 +1,8 @@
 type Query {
     film(id: Long): Film
+    allFilms: Films
     people(id: Long): People
+    planets(id: Long): Planets
 }
 
 type Film {
@@ -18,6 +20,13 @@ type Film {
     created: String
     edited: String
     url: String
+}
+
+type Films {
+    count: Int
+    next: String
+    previous: String
+    results: [Film]
 }
 
 type People {
@@ -39,3 +48,19 @@ type People {
     url: String
 }
 
+type Planets {
+    name: String
+    rotation_period: Int
+    orbital_period: Int
+    diameter: Int
+    climate: String
+    gravity: String
+    terrain: String
+    surface_water: Int
+    population: String
+    residents: [String]
+    films: [String]
+    created: String
+    edited: String
+    url: String
+}

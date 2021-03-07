@@ -5,6 +5,7 @@ import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpEntity;
+import org.springframework.http.HttpHeaders;
 import org.springframework.http.HttpMethod;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.client.HttpClientErrorException;
@@ -28,6 +29,16 @@ public class RestConnector<T> {
             throw new PrimerException(ex.getResponseBodyAsString(), ex.getStatusCode());
         }
         return responseEntity;
+    }
+
+    public HttpEntity<String> entity() {
+        return new HttpEntity<>(getHeaders());
+    }
+
+    private HttpHeaders getHeaders() {
+        HttpHeaders httpHeaders = new HttpHeaders();
+        httpHeaders.add("Content-Type", "application/json");
+        return httpHeaders;
     }
 
 }

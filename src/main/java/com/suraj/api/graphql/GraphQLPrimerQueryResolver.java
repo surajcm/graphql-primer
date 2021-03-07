@@ -2,7 +2,9 @@ package com.suraj.api.graphql;
 
 import com.suraj.api.film.service.FilmService;
 import com.suraj.api.model.response.Film;
+import com.suraj.api.model.response.Films;
 import com.suraj.api.model.response.People;
+import com.suraj.api.model.response.Planets;
 import graphql.kickstart.tools.GraphQLQueryResolver;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
@@ -24,9 +26,21 @@ public class GraphQLPrimerQueryResolver implements GraphQLQueryResolver {
         return Optional.ofNullable(film).orElse(null);
     }
 
+    public Films allFilms() {
+        logger.info("GraphQL request received for all films");
+        Films films = filmService.getAllFilms();
+        return Optional.ofNullable(films).orElse(null);
+    }
+
     public People people(final Long id) {
         logger.info("GraphQL request received with id : " + id);
         People people = filmService.getPeopleById(id);
         return Optional.ofNullable(people).orElse(null);
+    }
+
+    public Planets planets(final Long id) {
+        logger.info("GraphQL request received with id : " + id);
+        Planets planets = filmService.getPlanetsById(id);
+        return Optional.ofNullable(planets).orElse(null);
     }
 }
