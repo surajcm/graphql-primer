@@ -7,7 +7,7 @@ public class Vehicles {
     private String model;
     private String manufacturer;
     private String cost_in_credits;
-    private float length;
+    private String length;
     private int max_atmosphering_speed;
     private int crew;
     private int passengers;
@@ -52,11 +52,11 @@ public class Vehicles {
         this.cost_in_credits = cost_in_credits;
     }
 
-    public float getLength() {
+    public String getLength() {
         return length;
     }
 
-    public void setLength(float length) {
+    public void setLength(String length) {
         this.length = length;
     }
 

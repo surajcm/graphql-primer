@@ -5,6 +5,9 @@ import com.suraj.api.model.response.Film;
 import com.suraj.api.model.response.Films;
 import com.suraj.api.model.response.People;
 import com.suraj.api.model.response.Planets;
+import com.suraj.api.model.response.Species;
+import com.suraj.api.model.response.StarShips;
+import com.suraj.api.model.response.Vehicles;
 import graphql.kickstart.tools.GraphQLQueryResolver;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
@@ -42,5 +45,23 @@ public class GraphQLPrimerQueryResolver implements GraphQLQueryResolver {
         logger.info("GraphQL request received with id : " + id);
         Planets planets = filmService.getPlanetsById(id);
         return Optional.ofNullable(planets).orElse(null);
+    }
+
+    public Species species(final Long id) {
+        logger.info("GraphQL request received with id : " + id);
+        Species species = filmService.getSpeciesById(id);
+        return Optional.ofNullable(species).orElse(null);
+    }
+
+    public StarShips starShips(final Long id) {
+        logger.info("GraphQL request received with id : " + id);
+        StarShips starShips = filmService.getStarShipsById(id);
+        return Optional.ofNullable(starShips).orElse(null);
+    }
+
+    public Vehicles vehicles(final Long id) {
+        logger.info("GraphQL request received with id : " + id);
+        Vehicles vehicles = filmService.getVehiclesById(id);
+        return Optional.ofNullable(vehicles).orElse(null);
     }
 }

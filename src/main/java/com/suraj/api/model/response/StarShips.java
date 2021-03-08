@@ -7,7 +7,7 @@ public class StarShips {
     private String model;
     private String manufacturer;
     private Long cost_in_credits;
-    private Long length;
+    private String length;
     private int max_atmosphering_speed;
     private String crew;
     private String passengers;
@@ -54,11 +54,11 @@ public class StarShips {
         this.cost_in_credits = cost_in_credits;
     }
 
-    public Long getLength() {
+    public String getLength() {
         return length;
     }
 
-    public void setLength(Long length) {
+    public void setLength(String length) {
         this.length = length;
     }
 

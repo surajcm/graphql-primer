@@ -6,7 +6,7 @@ public class Species {
     private String name;
     private String classification;
     private String designation;
-    private int average_height;
+    private String average_height;
     private String skin_colors;
     private String hair_colors;
     private String eye_colors;
@@ -43,11 +43,11 @@ public class Species {
         this.designation = designation;
     }
 
-    public int getAverage_height() {
+    public String getAverage_height() {
         return average_height;
     }
 
-    public void setAverage_height(int average_height) {
+    public void setAverage_height(String average_height) {
         this.average_height = average_height;
     }
 

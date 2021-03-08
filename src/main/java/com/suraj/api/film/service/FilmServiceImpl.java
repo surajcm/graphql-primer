@@ -65,7 +65,7 @@ public class FilmServiceImpl implements FilmService {
     }
 
     @Override
-    public People getPeopleById(Long id) {
+    public People getPeopleById(final Long id) {
         logger.info("Calling people by id on :" + id);
         People people = null;
         try {
@@ -78,7 +78,7 @@ public class FilmServiceImpl implements FilmService {
     }
 
     @Override
-    public Planets getPlanetsById(Long id) {
+    public Planets getPlanetsById(final Long id) {
         logger.info("Calling planets by id on :" + id);
         Planets planets = null;
         try {
@@ -91,7 +91,7 @@ public class FilmServiceImpl implements FilmService {
     }
 
     @Override
-    public StarShips getStarShipsById(Long id) {
+    public StarShips getStarShipsById(final Long id) {
         logger.info("Calling StarShips by id on :" + id);
         StarShips starShips = null;
         try {
@@ -104,7 +104,7 @@ public class FilmServiceImpl implements FilmService {
     }
 
     @Override
-    public Vehicles getVehiclesById(Long id) {
+    public Vehicles getVehiclesById(final Long id) {
         logger.info("Calling Vehicles by id on :" + id);
         Vehicles vehicles = null;
         try {
@@ -117,7 +117,7 @@ public class FilmServiceImpl implements FilmService {
     }
 
     @Override
-    public Species getSpeciesById(Long id) {
+    public Species getSpeciesById(final Long id) {
         logger.info("Calling Species by id on :" + id);
         Species species = null;
         try {
