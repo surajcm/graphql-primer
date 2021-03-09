@@ -31,14 +31,14 @@ Please find the REST endpoint at http://localhost:8090/swagger-ui/index.html?con
   <summary>
     Sample Film Response
   </summary>
-    <a href="https://github.com/surajcm/graphql-primer/blob/main/dev/film_response.json">film_response.json</a>
+    <a href="https://github.com/surajcm/graphql-primer/blob/main/dev/rest/film_response.json">film_response.json</a>
 </details>
 
 <details>
   <summary>
     Sample AllFilms Response
   </summary>
-    <a href="https://github.com/surajcm/graphql-primer/blob/main/dev/allFilms_response.json">allFilms_response.json</a>
+    <a href="https://github.com/surajcm/graphql-primer/blob/main/dev/rest/allFilms_response.json">allFilms_response.json</a>
 </details>
 
 ### GraphiQL UI
