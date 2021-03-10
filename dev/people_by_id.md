@@ -1,6 +1,6 @@
 #### GraphiQL sample request & response
 
-![screenshot](https://github.com/surajcm/graphql-primer/blob/main/dev/img/graphiql_people_by_id.png.png?raw=true)
+![screenshot](https://github.com/surajcm/graphql-primer/blob/main/dev/img/graphiql_people_by_id.png?raw=true)
 
 #### Request
 ```

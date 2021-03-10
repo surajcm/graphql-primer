@@ -9,7 +9,7 @@ import org.springframework.stereotype.Component;
 @Component
 public class PlanetsConnector  extends RestConnector<Planets> {
 
-    final String uri = "https://swapi.dev/api/planets/";
+    private static final String uri = "https://swapi.dev/api/planets/";
 
     public Planets getPlanetsById(final Long id) {
         ResponseEntity<Planets> responseEntity = process(uri + id + "/",

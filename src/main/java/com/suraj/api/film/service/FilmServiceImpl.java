@@ -23,6 +23,7 @@ import org.springframework.stereotype.Service;
 public class FilmServiceImpl implements FilmService {
 
     private static final Logger logger = LoggerFactory.getLogger(FilmServiceImpl.class);
+    private static final String RESPONSE_IS = "Response is ";
 
     @Autowired
     private FilmConnector filmConnector;
@@ -57,7 +58,7 @@ public class FilmServiceImpl implements FilmService {
         Film film = null;
         try {
             film = filmConnector.getFilmById(id);
-            logger.info("Response is " + film);
+            logger.info(RESPONSE_IS + film);
         } catch (Exception ex) {
             ex.printStackTrace();
         }
@@ -70,7 +71,7 @@ public class FilmServiceImpl implements FilmService {
         People people = null;
         try {
             people = peopleConnector.getPeopleById(id);
-            logger.info("Response is " + people);
+            logger.info(RESPONSE_IS + people);
         } catch (Exception ex) {
             ex.printStackTrace();
         }
@@ -83,7 +84,7 @@ public class FilmServiceImpl implements FilmService {
         Planets planets = null;
         try {
             planets = planetsConnector.getPlanetsById(id);
-            logger.info("Response is " + planets);
+            logger.info(RESPONSE_IS + planets);
         } catch (Exception ex) {
             ex.printStackTrace();
         }
@@ -96,7 +97,7 @@ public class FilmServiceImpl implements FilmService {
         StarShips starShips = null;
         try {
             starShips = starShipConnector.getStarShipsById(id);
-            logger.info("Response is " + starShips);
+            logger.info(RESPONSE_IS + starShips);
         } catch (Exception ex) {
             ex.printStackTrace();
         }
@@ -109,7 +110,7 @@ public class FilmServiceImpl implements FilmService {
         Vehicles vehicles = null;
         try {
             vehicles = vehiclesConnector.getVehiclesById(id);
-            logger.info("Response is " + vehicles);
+            logger.info(RESPONSE_IS + vehicles);
         } catch (Exception ex) {
             ex.printStackTrace();
         }
@@ -122,7 +123,7 @@ public class FilmServiceImpl implements FilmService {
         Species species = null;
         try {
             species = speciesConnector.getSpeciesById(id);
-            logger.info("Response is " + species);
+            logger.info(RESPONSE_IS + species);
         } catch (Exception ex) {
             ex.printStackTrace();
         }

@@ -9,7 +9,7 @@ import org.springframework.stereotype.Component;
 @Component
 public class FilmsConnector extends RestConnector<Films> {
 
-    final String uri = "https://swapi.dev/api/films/";
+    private static final String uri = "https://swapi.dev/api/films/";
 
     public Films getAllFilmsData() {
         ResponseEntity<Films> responseEntity = process(uri,

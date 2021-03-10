@@ -9,7 +9,7 @@ import org.springframework.stereotype.Component;
 @Component
 public class StarShipConnector extends RestConnector<StarShips> {
 
-    final String uri = "https://swapi.dev/api/starships/";
+    private static final String uri = "https://swapi.dev/api/starships/";
 
     public StarShips getStarShipsById(final Long id) {
         ResponseEntity<StarShips> responseEntity = process(uri + id + "/",
