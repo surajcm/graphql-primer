@@ -1,20 +1,15 @@
 package com.suraj.api.film.connector;
 
 import com.suraj.api.model.response.People;
-import com.suraj.api.rest.RestConnector;
-import org.springframework.http.HttpMethod;
-import org.springframework.http.ResponseEntity;
+import com.suraj.api.rest.WebClientConnector;
 import org.springframework.stereotype.Component;
 
 @Component
-public class PeopleConnector extends RestConnector<People> {
+public class PeopleConnector extends WebClientConnector<People> {
 
-    private static final String uri = "https://swapi.dev/api/people/";
+    private static final String uri = "people/{id}/";
 
     public People getPeopleById(final Long id) {
-        ResponseEntity<People> responseEntity = process(uri + id + "/",
-                HttpMethod.GET,
-                entity(), People.class);
-        return responseEntity.getBody();
+        return process(uri, id, People.class).block();
     }
 }

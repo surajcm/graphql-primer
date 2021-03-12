@@ -19,4 +19,12 @@ public class WebClientConnector<T> {
                 .retrieve()
                 .bodyToMono(tClass);
     }
+
+    public Mono<T> process(final String uri, final Long id, final Class<T> tClass) {
+        return webClient
+                .get()
+                .uri(uri, id)
+                .retrieve()
+                .bodyToMono(tClass);
+    }
 }

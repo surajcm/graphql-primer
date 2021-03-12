@@ -7,7 +7,7 @@ import org.springframework.stereotype.Component;
 @Component
 public class FilmsConnector extends WebClientConnector<Films> {
 
-    private static final String uri = "https://swapi.dev/api/films/";
+    private static final String uri = "films/";
 
     public Films getAllFilmsData() {
         return process(uri, Films.class).block();
